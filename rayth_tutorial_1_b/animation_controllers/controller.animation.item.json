@@ -6,7 +6,7 @@
         "states": {
           "default": {
             "on_entry": [
-              "/tag @s[name=gem] add gem"
+              "/function taggem"
             ]
           }
         }

@@ -1,0 +1,1 @@
+tag @s[type=item,name="Gem"] add gem

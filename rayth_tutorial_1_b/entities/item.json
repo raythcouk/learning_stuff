@@ -38,7 +38,8 @@
             "minecraft:environment_sensor" : {
                 "triggers": [
                     {
-                        "event" : "gem_item",
+                        "event" : "tut:gem_item_event",
+                        "target" : "self",
                         "filters" : {
                             "all_of" : [
                                 {
@@ -66,7 +67,7 @@
                     ]
                 }
             },
-            "gem_item" : {
+            "tut:gem_item_event" : {
                 "add" : {
                     "component_groups" : [
                         "gem_item"

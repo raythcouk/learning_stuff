@@ -27,36 +27,36 @@
                 "family": [
                   "item"
                 ]
-              },
-              "minecraft:collision_box": {
+            },
+            "minecraft:collision_box": {
                 "height": 0.01,
                 "width": 0.01
-              },
-              "minecraft:physics": {
+            },
+            "minecraft:physics": {
                 "has_gravity": true
-              },
-              "minecraft:environment_sensor" : {
-                  "triggers": [
-                      {
-                          "event" : "gem_item",
-                          "filters" : {
-                              "all_of" : [
-                                  {
-                                      "test" : "has_tag",
-                                      "value" : "gem",
-                                      "subject" : "self",
-                                      "operator" : "=="
-                                  }
-                              ]
-                          }
-                      }
-                  ]
-              },
-              "minecraft:is_hidden_when_invisible" : {},
-              "minecraft:pushable" : {
-                  "is_pushable" : true,
-                  "is_pushable_by_piston" : true
-              }
+            },
+            "minecraft:environment_sensor" : {
+                "triggers": [
+                    {
+                        "event" : "gem_item",
+                        "filters" : {
+                            "all_of" : [
+                                {
+                                    "test" : "has_tag",
+                                    "value" : "gem",
+                                    "subject" : "self",
+                                    "operator" : "=="
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "minecraft:is_hidden_when_invisible" : {},
+            "minecraft:pushable" : {
+                "is_pushable" : true,
+                "is_pushable_by_piston" : true
+            }
         },
         "events" : {
             "despawn" : {

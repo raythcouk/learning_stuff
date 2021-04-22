@@ -1,0 +1,17 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Rayth Bedrock.dev Tutorial",
+        "description": "Following through the tutorials on bedrock.dev.",
+        "uuid": "02ee8d4a-87a0-4ebc-855e-72ac4f5c9353",
+        "version": [ 1, 0, 0 ],
+        "min_engine_version": [ 1, 16, 0 ]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "df4b8d13-6ffa-441c-a0c5-e7fb8a35ae86",
+            "version": [ 1, 0, 0 ]
+        }
+    ]
+}

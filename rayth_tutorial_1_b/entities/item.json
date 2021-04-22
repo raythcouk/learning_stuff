@@ -1,0 +1,78 @@
+{
+    "format_version" : "1.16.0",
+    "minecraft:entity" : {
+        "description" : {
+            "identifier" : "minecaraft:item",
+            "is_spawnable" : true,
+            "is_summonable" : true,
+            "scripts" : {
+                "animate" : [
+                    "item"
+                ]
+            },
+            "animations" : {
+                "item" : "controller.animation.item"
+            }
+        },
+        "component_groups" : {
+            "despawn" : {
+                "minecraft:instant_despawn" : {}
+            },
+            "gem_item" : {
+                "minecraft:fire_immune" : true
+            }
+        },
+        "components" : {
+            "minecraft:type_family": {
+                "family": [
+                  "item"
+                ]
+              },
+              "minecraft:collision_box": {
+                "height": 0.01,
+                "width": 0.01
+              },
+              "minecraft:physics": {
+                "has_gravity": true
+              },
+              "minecraft:environment_sensor" : {
+                  "triggers": [
+                      {
+                          "event" : "gem_item",
+                          "filters" : {
+                              "all_of" : [
+                                  {
+                                      "test" : "has_tag",
+                                      "value" : "gem",
+                                      "subject" : "self",
+                                      "operator" : "=="
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              },
+              "minecraft:is_hidden_when_invisible" : {},
+              "minecraft:pushable" : {
+                  "is_pushable" : true,
+                  "is_pushable_by_piston" : true
+              }
+        },
+        "events" : {
+            "despawn" : {
+                "add" : {
+                    "component_groups" : [
+                        "despawn"
+                    ]
+                }
+            },
+            "gem_item" : {
+                "add" : {
+                    "component_groups" : [
+                        "gem_item"
+                    ]
+                }
+            }
+        }
+    }
+}
